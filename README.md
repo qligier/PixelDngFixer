@@ -40,7 +40,7 @@ the JRE (or JDK) 18 to run the application from sources or the JAR.
 
 Run the application from sources with Maven:
 ```bash
-mvn compile exec:java -Dexec.mainClass="ch.qligier.app.pixeldngfixer.Main"
+mvn compile exec:java
 ```
 
 Run the fat JAR:
