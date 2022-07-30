@@ -45,7 +45,7 @@ mvn compile exec:java -Dexec.mainClass="ch.qligier.app.pixeldngfixer.Main"
 
 Run the fat JAR:
 ```bash
-java -jar pixel-dng-fixer-[version]-fat.jar
+java -jar pixel-dng-fixer-[version].jar
 ```
 
 EXE...
