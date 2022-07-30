@@ -36,7 +36,7 @@ directory in the application and hit the big button! That's it.
 ## How To Run
 
 Make sure [ExifTool](https://exiftool.org) is installed and on the path (`exiftool -ver` to test). You'll also need
-the JRE 18 to run the application or the JAR.
+the JRE (or JDK) 18 to run the application from sources or the JAR.
 
 Run the application from sources with Maven:
 ```bash
@@ -45,7 +45,7 @@ mvn compile exec:java -Dexec.mainClass="ch.qligier.app.pixeldngfixer.Main"
 
 Run the fat JAR:
 ```bash
-java -cp pixel-dng-fixer-version-fat.jar ch.qligier.app.pixeldngfixer.Main
+java -jar pixel-dng-fixer-[version]-fat.jar
 ```
 
 EXE...
