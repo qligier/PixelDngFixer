@@ -1,0 +1,58 @@
+/**
+ * CSS for the markdown view component.
+ */
+.markdown-italic {
+    -fx-font-style: italic;
+}
+
+.markdown-bold {
+    -fx-font-weight: 600;
+}
+
+.markdown-link {
+    -fx-cursor: HAND;
+    -fx-fill: #0099e5;
+}
+
+.markdown-link-hover {
+    -fx-underline: true;
+}
+
+.markdown-heading-1 .markdown-text {
+    -fx-font-size: 20;
+}
+
+.markdown-heading-2 .markdown-text {
+    -fx-font-size: 14;
+    -fx-font-weight: 600;
+}
+
+.markdown-heading-1 {
+    -fx-padding: 2 0 2 0;
+}
+
+.markdown-heading-2 {
+    -fx-padding: 2 0 1 0;
+}
+
+.markdown-code {
+    -fx-text-fill: #00000090;
+    -fx-padding: 0 8 0 8;
+    -fx-font-size: 9;
+}
+
+.markdown-code-background {
+    -fx-padding: 0;
+    -fx-border-radius: 2;
+    -fx-background-radius: 8;
+    -fx-background-color: #00000009;
+    -fx-font-size: 9;
+}
+
+.markdown-normal-flow {
+    -fx-line-spacing: 5;
+}
+
+.markdown-paragraph-list {
+    -fx-spacing: 15;
+}

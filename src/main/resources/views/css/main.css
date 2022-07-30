@@ -1,0 +1,34 @@
+/**
+ * The main CSS design.
+ */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v29-latin-ext_latin-regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v29-latin-ext_latin-600.ttf') format('ttf');
+}
+
+* {
+    -fx-font-family: 'Open Sans', System;
+}
+
+.appName {
+    -fx-font-weight: 600;
+    -fx-text-fill: #005696;
+    -fx-font-size: 24;
+}
+
+.tooltip {
+    -fx-font-size: 12;
+}
+
+.button.main {
+    -fx-font-size: 13;
+}
