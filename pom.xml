@@ -17,8 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.version>18.0.1</javafx.version>
-        <flexmark.version>0.64.0</flexmark.version>
-        <main.class>ch.qligier.app.pixeldngfixer.PixelDngFixerApplication</main.class>
+        <main.class>ch.qligier.app.pixeldngfixer.Main</main.class>
     </properties>
 
     <dependencies>
@@ -47,54 +46,6 @@
             <groupId>com.github.mjeanroy</groupId>
             <artifactId>exiftool-lib</artifactId>
             <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-util-collection</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-util-misc</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-util-options</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-util-sequence</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-ext-attributes</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-ext-gfm-tasklist</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-ext-tables</artifactId>
-            <version>${flexmark.version}</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 
