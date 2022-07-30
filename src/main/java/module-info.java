@@ -4,7 +4,7 @@
  * @author Quentin Ligier
  **/
 
-module pixel.dng.fixer {
+module pixel_dng_fixer {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.sandec.mdfx;
