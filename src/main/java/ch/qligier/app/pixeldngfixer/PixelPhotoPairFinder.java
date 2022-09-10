@@ -38,7 +38,9 @@ public class PixelPhotoPairFinder {
         String lastDngFilename = null;
         File lastDngFile = null;
         for (final var file : files) {
-            final var filename = file.getName().substring(0, file.getName().length() - 4);
+             // JPEGs may have a postfix in the filename (e.g. MP) but not the DNG files
+            final var postfixLength = file.getName().endsWith(".MP.jpg") ? 7 : 4;
+            final var filename = file.getName().substring(0, file.getName().length() - postfixLength);
             if (file.getName().endsWith(".dng")) {
                 lastDngFile = file;
                 lastDngFilename = filename;

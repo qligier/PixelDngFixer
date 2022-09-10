@@ -3,6 +3,7 @@
 ## 1.0.2 (upcoming)
 
 - Fix backup file creation
+- Add support for the 'MP' filename postfix in JPG files
 
 ## 1.0.1 (2022-08-05)
 
