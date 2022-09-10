@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.2 (upcoming)
+## 1.0.2 (2022-09-10)
 
 - Fix backup file creation
 - Add support for the 'MP' filename postfix in JPG files
