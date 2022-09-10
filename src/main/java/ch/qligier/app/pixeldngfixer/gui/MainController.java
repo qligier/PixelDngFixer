@@ -219,10 +219,6 @@ public class MainController implements Initializable {
      * @param log The message to add.
      */
     protected void addLog(final String log) {
-        this.logTextarea.setText(this.logTextarea.getText()
-            + this.timeFormatter.format(LocalDateTime.now())
-            + ": "
-            + log
-            + "\n");
+        this.logTextarea.appendText(this.timeFormatter.format(LocalDateTime.now()) + ": " + log + "\n");
     }
 }

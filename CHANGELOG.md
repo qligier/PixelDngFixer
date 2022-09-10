@@ -4,6 +4,7 @@
 
 - Fix backup file creation
 - Add support for the 'MP' filename postfix in JPG files
+- Scroll automatically to the bottom of logs
 
 ## 1.0.1 (2022-08-05)
 
