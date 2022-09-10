@@ -111,3 +111,14 @@ and [bug reports](https://github.com/qligier/PixelDngFixer/issues) are always we
 
 The application is licensed under the [MIT License](https://opensource.org/licenses/mit-license.php).
 See the [LICENSE](LICENSE.txt) for more information.
+
+### How to build
+
+```bash
+mvn clean package
+conveyor make windows-app
+conveyor make linux-app
+conveyor "-Kapp.machines=mac.amd64" make mac-app
+conveyor "-Kapp.machines=mac.aarch64" make mac-app
+conveyor make site
+```
