@@ -14,5 +14,5 @@ public class Config {
     }
 
     public static final String APP_NAME = "Pixel DNG Fixer";
-    public static final String APP_VERSION = "1.0.2";
+    public static final String APP_VERSION = "1.0.3-SNAPSHOT";
 }
