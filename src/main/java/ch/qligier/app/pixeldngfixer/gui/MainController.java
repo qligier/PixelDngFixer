@@ -81,7 +81,7 @@ public class MainController implements Initializable {
     public void initialize(final URL url, final ResourceBundle resourceBundle) {
         this.appNameLabel.setText(Config.APP_NAME);
         this.photoDirLabel.setText(this.selectedDir.getAbsolutePath());
-        this.createBackupsCheckbox.setSelected(!this.createBackupBeforeFixing);
+        this.createBackupsCheckbox.setSelected(this.createBackupBeforeFixing);
         this.progressBar.setDisable(true);
     }
 
@@ -210,7 +210,7 @@ public class MainController implements Initializable {
      */
     @FXML
     protected void onCreateBackupsCheckboxClick() {
-        this.createBackupBeforeFixing = !this.createBackupsCheckbox.isSelected();
+        this.createBackupBeforeFixing = this.createBackupsCheckbox.isSelected();
     }
 
     /**
