@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javafx.version>18.0.2</javafx.version>
+        <javafx.version>19</javafx.version>
         <main.class>ch.qligier.app.pixeldngfixer.Main</main.class>
     </properties>
 
