@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javafx.version>18.0.2</javafx.version>
+        <javafx.version>19</javafx.version>
         <main.class>ch.qligier.app.pixeldngfixer.Main</main.class>
     </properties>
 
@@ -101,7 +101,7 @@
                 <!-- Create a fat JAR -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.4.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>

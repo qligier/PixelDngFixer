@@ -2,6 +2,8 @@
 
 ## 1.0.3 (SNAPSHOT)
 
+- Update dependencies
+
 ## 1.0.2 (2022-09-10)
 
 - Fix backup file creation
