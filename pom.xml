@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.sandec</groupId>
             <artifactId>mdfx</artifactId>
-            <version>0.2.7</version>
+            <version>0.2.8</version>
         </dependency>
         <dependency>
             <groupId>com.github.mjeanroy</groupId>
