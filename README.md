@@ -14,7 +14,7 @@ Pixel DNG Fixer
 ![GitHub](https://img.shields.io/github/license/qligier/PixelDngFixer?style=flat-square)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/qligier/PixelDngFixer?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/s/s?style=flat-square)
-![JDK 18](https://img.shields.io/badge/JDK-18-blue?style=flat-square)
+![JDK 17](https://img.shields.io/badge/JDK-17-blue?style=flat-square)
 
 </p>
 
@@ -37,7 +37,7 @@ directory in the application and hit the big button! That's it.
 ## How To Run
 
 Make sure [ExifTool](https://exiftool.org) is installed and on the path (`exiftool -ver` to test). You'll also need
-the JRE (or JDK) 18 to run the application from sources or the JAR.
+the JRE (or JDK) 17 to run the application from the JAR or sources.
 
 Run the application from sources with Maven:
 ```bash
