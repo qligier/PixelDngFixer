@@ -1,4 +1,4 @@
-Developed in [Java 18](https://openjdk.org/projects/jdk/18/) with [JavaFX](https://openjfx.io). The application uses
+Developed in [Java 17](https://openjdk.org/projects/jdk/17/) with [JavaFX](https://openjfx.io). The application uses
 the following:
 
 - [JPro-one/markdown-javafx-renderer](https://github.com/JPro-one/markdown-javafx-renderer) `Apache 2.0`
