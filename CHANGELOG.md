@@ -2,6 +2,7 @@
 
 ## 1.0.3 (SNAPSHOT)
 
+- Improve performance by keeping multiple ExifTool instances open
 - Update dependencies
 
 ## 1.0.2 (2022-09-10)

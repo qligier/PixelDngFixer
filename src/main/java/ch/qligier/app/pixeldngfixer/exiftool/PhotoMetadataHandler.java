@@ -45,6 +45,11 @@ public class PhotoMetadataHandler {
     );
 
     /**
+     * The ExifTool pool size.
+     */
+    private static final int POOL_SIZE = 2;
+
+    /**
      * The ExifTool interface.
      */
     private final ExifTool exifTool;
@@ -54,13 +59,16 @@ public class PhotoMetadataHandler {
      */
     public PhotoMetadataHandler() {
         this.exifTool = new ExifToolBuilder()
-            .withStrategy(new CustomExecutionStrategy())
+            .withPoolSize(POOL_SIZE)
+            .enableStayOpen()
             .build();
     }
 
     /**
-     * @param filePair
-     * @throws IOException
+     * A helper that retrieves and pretty-print the metadata of a pair of file, to facilitate comparison.
+     *
+     * @param filePair The file pair.
+     * @throws IOException if an exception arises when running ExifTool.
      */
     public void showMetadata(final Pair<File, File> filePair) throws IOException {
         final List<Tag> tags = Arrays.asList(StandardTag.values());
@@ -88,19 +96,21 @@ public class PhotoMetadataHandler {
      *
      * @param filePair                 The pair of photos to process. The key is the metadata source, the value is the
      *                                 metadata destination.
+     * @param tags                     The list of ExifTool tags to copy.
      * @param createBackupBeforeFixing Whether to create backups before fixing the destination files or not.
      * @throws IOException if an exception arises when running ExifTool.
-     * @params tags The list of ExifTool tags to copy.
      */
     public void copyMetadata(final Pair<File, File> filePair,
                              final List<Tag> tags,
                              final boolean createBackupBeforeFixing) throws IOException {
         final var metadata = this.exifTool.getImageMeta(filePair.getKey(), tags);
 
-        final var options = new ArrayList<String>(1);
-        options.add("-F");
+        final var options = new ArrayList<String>(3);
+        options.add("-ignoreMinorErrors"); // Ignore minor errors and warnings.
+        options.add("-fixBase"); // Fix the base for maker notes offsets.
         if (!createBackupBeforeFixing) {
-            options.add("-overwrite_original");
+            options.add("-overwrite_original"); // Overwrite the original FILE (instead of preserving it by adding
+            // '_original' to the file name) when writing information to an image.
         }
         this.exifTool.setImageMeta(filePair.getValue(), () -> options, metadata);
     }
