@@ -26,25 +26,31 @@ Pixel DNG Fixer
 </p>
 
 When saving both the JPG and DNG (RAW) photos, the Google Camera application on Pixel smartphones generates DNG
-files with missing or invalid metadata (see thereafter for an example). This application uses the JPG files and copy
-their metadata to fix the DNG files.
+files with missing or invalid metadata (see thereafter for an example).
+Multiple bug reports have been reported to Google ([1](https://support.google.com/pixelphone/thread/112616241),
+[2](https://support.google.com/pixelphone/thread/43493374), [3](https://support.google.com/pixelphone/thread/156039163),
+[4](https://support.google.com/pixelphone/thread/1314238)) but no fix has been provided yet.
+This application uses the JPG files and copy their metadata to fix the DNG files.
 
-Simply copy the JPG (`sdcard/DCIM/Camera`) and DNG (`sdcard/Pictures/Raw`) files to a single folder. Choose that
-directory in the application and hit the big button! That's it.
+Simply copy the JPG (`sdcard/DCIM/Camera`) and DNG (`sdcard/Pictures/Raw`) files to a single folder.
+Choose that directory in the application and hit the big button!
+That's it.
 
 ![Screenshot of the application](screenshot.png)
 
 ## How To Run
 
-Make sure [ExifTool](https://exiftool.org) is installed and on the path (`exiftool -ver` to test). You'll also need
-the JRE (or JDK) 17 to run the application from the JAR or sources.
+Make sure [ExifTool](https://exiftool.org) is installed and on the path (`exiftool -ver` to test).
+You'll also need the JRE (or JDK) 17 to run the application from the JAR or sources.
 
 Run the fat JAR:
+
 ```bash
 java -jar pixel-dng-fixer-1.0.2.jar
 ```
 
 Or run the application from sources:
+
 ```bash
 mvn compile exec:java
 ```
