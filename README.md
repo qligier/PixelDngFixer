@@ -46,7 +46,7 @@ You'll also need the JRE (or JDK) 17 to run the application from the JAR or sour
 Run the fat JAR:
 
 ```bash
-java -jar pixel-dng-fixer-1.0.2.jar
+java -jar pixel-dng-fixer-1.0.3.jar
 ```
 
 Or run the application from sources:
