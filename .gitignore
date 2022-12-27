@@ -11,6 +11,7 @@ output/
 .idea/compiler.xml
 .idea/libraries/
 .idea/jpa-buddy.xml
+.idea/git_toolbox_prj.xml
 *.iws
 *.iml
 *.ipr
