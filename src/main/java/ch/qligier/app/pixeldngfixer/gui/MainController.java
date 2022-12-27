@@ -1,9 +1,9 @@
 package ch.qligier.app.pixeldngfixer.gui;
 
 import ch.qligier.app.pixeldngfixer.Config;
-import ch.qligier.app.pixeldngfixer.exiftool.PhotoMetadataHandler;
 import ch.qligier.app.pixeldngfixer.PixelPhotoPairFinder;
 import ch.qligier.app.pixeldngfixer.Utils;
+import ch.qligier.app.pixeldngfixer.exiftool.PhotoMetadataHandler;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,23 +29,23 @@ import java.util.function.Consumer;
 public class MainController implements Initializable {
 
     /**
+     * The time formatter for logs.
+     */
+    protected final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    /**
      * JavaFX markup.
      */
     @FXML
     protected TextArea logTextarea;
-
     @FXML
     protected ProgressBar progressBar;
-
     @FXML
     protected Label appNameLabel;
-
     @FXML
     protected Label photoDirLabel;
-
     @FXML
     protected CheckBox createBackupsCheckbox;
-
     @FXML
     protected Button processButton;
 
@@ -58,11 +58,6 @@ public class MainController implements Initializable {
      * Whether a backup is created before fixing files or not.
      */
     protected boolean createBackupBeforeFixing = true;
-
-    /**
-     * The time formatter for logs.
-     */
-    protected final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     /**
      * The parent JavaFX {@link Stage}. A bit hacky.
@@ -130,8 +125,9 @@ public class MainController implements Initializable {
                     for (final var pair : foundPairs) {
                         ++i;
                         //photoMetadataHandler.showMetadata(pair);
-                        photoMetadataHandler.copyMetadata(pair, PhotoMetadataHandler.BROKEN_TAGS,
-                            createBackupBeforeFixing);
+                        photoMetadataHandler.copyMetadata(pair,
+                                                          PhotoMetadataHandler.BROKEN_TAGS,
+                                                          createBackupBeforeFixing);
                         updateMessage("Processed file " + pair.getValue().getName());
                         updateProgress(i, nbPairs);
                     }
