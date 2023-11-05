@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.Tooltip?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane prefHeight="600.0" prefWidth="450.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml" fx:controller="ch.qligier.app.pixeldngfixer.gui.AboutController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="600.0" prefWidth="450.0" stylesheets="@css/main.css"
+            xmlns="http://javafx.com/javafx" fx:controller="ch.qligier.app.pixeldngfixer.gui.AboutController">
     <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" spacing="20.0" AnchorPane.bottomAnchor="0.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
@@ -60,7 +51,7 @@
             </Hyperlink>
         </HBox>
         <HBox alignment="CENTER">
-            <Label text="Copyright © 2022 "/>
+            <Label text="Copyright © 2023 "/>
             <Hyperlink focusTraversable="false" onAction="#openPersonalSite" style="-fx-padding: 0;"
                        text="Quentin Ligier" textFill="#0099e5">
                 <tooltip>
