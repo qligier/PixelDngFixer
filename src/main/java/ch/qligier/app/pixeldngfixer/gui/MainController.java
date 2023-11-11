@@ -128,7 +128,7 @@ public class MainController implements Initializable {
                         photoMetadataHandler.copyMetadata(pair,
                                                           PhotoMetadataHandler.BROKEN_TAGS,
                                                           createBackupBeforeFixing);
-                        updateMessage("Processed file " + pair.getValue().getName());
+                        updateMessage("Processed file " + pair.getRawFile().getName());
                         updateProgress(i, nbPairs);
                     }
                     return null;

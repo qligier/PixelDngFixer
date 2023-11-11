@@ -1,12 +1,11 @@
 package ch.qligier.app.pixeldngfixer.exiftool;
 
+import ch.qligier.app.pixeldngfixer.common.JpegRawPair;
 import com.thebuzzmedia.exiftool.ExifTool;
 import com.thebuzzmedia.exiftool.ExifToolBuilder;
 import com.thebuzzmedia.exiftool.Tag;
 import com.thebuzzmedia.exiftool.core.StandardTag;
-import javafx.util.Pair;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,10 +69,10 @@ public class PhotoMetadataHandler {
      * @param filePair The file pair.
      * @throws IOException if an exception arises when running ExifTool.
      */
-    public void showMetadata(final Pair<File, File> filePair) throws IOException {
+    public void showMetadata(final JpegRawPair filePair) throws IOException {
         final List<Tag> tags = Arrays.asList(StandardTag.values());
-        final var metadataJpg = this.exifTool.getImageMeta(filePair.getKey(), tags);
-        final var metadataDng = this.exifTool.getImageMeta(filePair.getValue(), tags);
+        final var metadataJpg = this.exifTool.getImageMeta(filePair.getJpegFile(), tags);
+        final var metadataDng = this.exifTool.getImageMeta(filePair.getRawFile(), tags);
 
         for (final var tag : tags) {
             if (!metadataJpg.containsKey(tag) && !metadataDng.containsKey(tag)) {
@@ -100,10 +99,10 @@ public class PhotoMetadataHandler {
      * @param createBackupBeforeFixing Whether to create backups before fixing the destination files or not.
      * @throws IOException if an exception arises when running ExifTool.
      */
-    public void copyMetadata(final Pair<File, File> filePair,
+    public void copyMetadata(final JpegRawPair filePair,
                              final List<Tag> tags,
                              final boolean createBackupBeforeFixing) throws IOException {
-        final var metadata = this.exifTool.getImageMeta(filePair.getKey(), tags);
+        final var metadata = this.exifTool.getImageMeta(filePair.getJpegFile(), tags);
 
         final var options = new ArrayList<String>(3);
         options.add("-ignoreMinorErrors"); // Ignore minor errors and warnings.
@@ -112,6 +111,6 @@ public class PhotoMetadataHandler {
             options.add("-overwrite_original"); // Overwrite the original FILE (instead of preserving it by adding
             // '_original' to the file name) when writing information to an image.
         }
-        this.exifTool.setImageMeta(filePair.getValue(), () -> options, metadata);
+        this.exifTool.setImageMeta(filePair.getRawFile(), () -> options, metadata);
     }
 }
