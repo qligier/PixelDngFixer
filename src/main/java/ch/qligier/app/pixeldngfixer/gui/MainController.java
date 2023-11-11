@@ -47,6 +47,8 @@ public class MainController implements Initializable {
     @FXML
     protected CheckBox createBackupsCheckbox;
     @FXML
+    protected CheckBox deleteJpegCheckbox;
+    @FXML
     protected Button processButton;
 
     /**
@@ -58,6 +60,11 @@ public class MainController implements Initializable {
      * Whether a backup is created before fixing files or not.
      */
     protected boolean createBackupBeforeFixing = true;
+
+    /**
+     * Whether the JPEG files are deleted after processing or not.
+     */
+    protected boolean deleteJpegsAfterFixing = false;
 
     /**
      * The parent JavaFX {@link Stage}. A bit hacky.
@@ -77,6 +84,7 @@ public class MainController implements Initializable {
         this.appNameLabel.setText(Config.APP_NAME);
         this.photoDirLabel.setText(this.selectedDir.getAbsolutePath());
         this.createBackupsCheckbox.setSelected(this.createBackupBeforeFixing);
+        this.deleteJpegCheckbox.setSelected(this.deleteJpegsAfterFixing);
         this.progressBar.setDisable(true);
     }
 
@@ -107,6 +115,7 @@ public class MainController implements Initializable {
         };
 
         final var createBackupBeforeFixing = this.createBackupBeforeFixing;
+        final var deleteJpegsAfterFixing = this.deleteJpegsAfterFixing;
         final var photoDir = this.selectedDir;
         final Consumer<String> logProxy = this::addLog;
         // Create a task to process the photos
@@ -130,6 +139,10 @@ public class MainController implements Initializable {
                                                           createBackupBeforeFixing);
                         updateMessage("Processed file " + pair.getRawFile().getName());
                         updateProgress(i, nbPairs);
+
+                        if (deleteJpegsAfterFixing) {
+                            pair.getJpegFile().delete();
+                        }
                     }
                     return null;
                 }
@@ -207,6 +220,11 @@ public class MainController implements Initializable {
     @FXML
     protected void onCreateBackupsCheckboxClick() {
         this.createBackupBeforeFixing = this.createBackupsCheckbox.isSelected();
+    }
+
+    @FXML
+    protected void onDeleteJpegCheckboxClick() {
+        this.deleteJpegsAfterFixing = this.deleteJpegCheckbox.isSelected();
     }
 
     /**
