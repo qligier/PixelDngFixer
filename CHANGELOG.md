@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.4 (SNAPSHOT)
+## 1.0.4 (2025-09-14)
 
 - Update to Java/JavaFX 21
 
