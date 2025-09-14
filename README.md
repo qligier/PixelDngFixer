@@ -14,7 +14,7 @@ Pixel DNG Fixer
 ![GitHub](https://img.shields.io/github/license/qligier/PixelDngFixer?style=flat-square)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/qligier/PixelDngFixer?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/qligier/PixelDngFixer?style=flat-square)
-![JDK 17](https://img.shields.io/badge/JDK-17-blue?style=flat-square)
+![JDK 21](https://img.shields.io/badge/JDK-21-blue?style=flat-square)
 
 </p>
 

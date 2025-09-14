@@ -2,7 +2,7 @@
 
 ## 1.0.4 (SNAPSHOT)
 
-- Update to JavaFX 21
+- Update to Java/JavaFX 21
 
 ## 1.0.3 (2022-12-27)
 
