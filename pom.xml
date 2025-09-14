@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.github.mjeanroy</groupId>
             <artifactId>exiftool-lib</artifactId>
-            <version>3.0.0</version>
+            <version>3.2.0</version>
         </dependency>
     </dependencies>
 
@@ -54,7 +54,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.14.0</version>
                 <configuration>
                     <source>21</source>
                     <target>21</target>
@@ -101,7 +101,7 @@
                 <!-- Create a fat JAR -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.6.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -122,7 +122,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.5.1</version>
                 <configuration>
                     <mainClass>${main.class}</mainClass>
                 </configuration>
