@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.github.mjeanroy</groupId>
             <artifactId>exiftool-lib</artifactId>
-            <version>3.2.0</version>
+            <version>3.3.0</version>
         </dependency>
     </dependencies>
 
